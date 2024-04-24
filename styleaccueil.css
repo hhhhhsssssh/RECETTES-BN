@@ -1,0 +1,73 @@
+@import url(https://fonts.bunny.net/css?family=great-vibes:400);
+
+*{font-family: "Great Vibes";
+padding : 0px;
+margin : 0px;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("backgroundaccueil.jpeg");
+    background-size: cover;
+    color: #fff; /* Texte blanc */
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    border: 2px solid #fff; /* Bordure blanche */
+    background-color: transparent;
+    color: #fff;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Légère transparence au survol */
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent pour le pied de page */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+}
+
+.form-container {
+    display: none;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+.form-container.active {
+    display: block;
+    font-size: 35px;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+
