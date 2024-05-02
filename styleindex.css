@@ -5,11 +5,9 @@ padding : 0px;
 margin : 0px;}
 
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url("backgroundaccueil.jpeg");
+    background-image: url(./mesimages/backgroundaccueil.jpeg);
     background-size: cover;
-    color: #fff; /* Texte blanc */
+    color: #fff;
 }
 
 header {
@@ -25,17 +23,19 @@ h1 {
 main {
     text-align: center;
     margin-top: 20px;
+    padding : 70px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 30px;
     cursor: pointer;
-    border: 2px solid #fff; /* Bordure blanche */
+    border: 2px solid #fff;
     background-color: transparent;
     color: #fff;
     margin: 0 10px;
     transition: all 0.3s ease;
+    z-index: 10;
 }
 
 button:hover {
@@ -45,7 +45,7 @@ button:hover {
 footer {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent pour le pied de page */
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -70,4 +70,36 @@ input {
 }
 
 
+.modal {
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; 
+}
 
+.modal h2 {
+    font-size: 40px;
+    padding: 40px;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #130603;
+    border-radius: 15px;
+    background-color: #04b1cc;
+    padding: 30px;
+    width: 25%;
+    height: 30%;
+    color: #ffffff;
+    background-color:#040709;
+    box-shadow: 0 0 10px #2D4454;
+
+}

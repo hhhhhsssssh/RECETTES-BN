@@ -27,9 +27,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])) {
                 if(password_verify($motdepasse, $user_data['motdepasse'])) {
                     // Enregistrement de l'ID de l'utilisateur dans la session
                     $_SESSION['user_id'] = $user_data['id'];
-                    
-                    // Redirection vers la page principale
-                    header('Location: Recettesphp.php');
+                    $_SESSION['username'] = $user_data['pseudo']; // Ajout du nom d'utilisateur à la session
+
+                     // Redirection vers la page d'accueil avec un paramètre pour indiquer une connexion réussie
+                    header('Location: index.php?connexion_reussie=true');
                     exit; // Arrêter l'exécution du script après la redirection
                 } else {
                     echo "Nom d'utilisateur ou mot de passe incorrect !";

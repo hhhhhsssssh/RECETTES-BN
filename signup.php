@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          // Hacher le mot de passe
          $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
 
-        try {
+ 
+         try {
             // Préparation de la requête d'insertion
             $query = "INSERT INTO utilisateurs (pseudo, email, motdepasse) VALUES (:username, :email, :password)";
             $statement = $connection->prepare($query);
@@ -31,8 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Enregistrement de l'ID de l'utilisateur dans la session
             $_SESSION['user_id'] = $connection->lastInsertId();
 
-            // Redirection vers la page principale
-            header('Location: Recettesphp.php');
+            // Stocker le pseudo dans une variable de session
+            $_SESSION['new_username'] = $new_username;
+
+            // Rediriger vers la page d'accueil avec un paramètre pour indiquer une inscription réussie
+            header('Location: index.php?inscription_reussie=true');
             exit; // Arrêter l'exécution du script après la redirection
         } else {
             echo "Erreur lors de l'inscription.";
